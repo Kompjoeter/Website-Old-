@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="p5.js"></script>
+    <script src="sketch.js"></script>
+    <script src="Picture.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div id="site-content">
+            <div id='header'>
+                <div id="header-bar">
+                    <img class="active" id="menu-icon" src="assets/menu-icon-light.svg" onclick="toggleNav()">
+                    <h1 id="header-title">RanDByyp</h1>        
+                    <div id="nav-inner-holder">
+                    </div>
+                </div>
+
+                <div id="nav-outer-holder">
+                    <ul id="nav-menu">
+                        <li class="nav-menu-option">About</li>
+                        <li class="nav-menu-option">Projects</li>
+                        <li class="nav-menu-option">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="content">
+
+                <div class="card">
+                    <div class="card-text">
+                        <div id="canvas-holder"></div>
+                        <h2 class="card-title">About.</h2>
+                        <p> 
+                            <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ab natus amet incidunt sit quam.</b>
+                            <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora unde consequuntur dolorem aspernatur ex veritatis nam perferendis repudiandae itaque quod dolor maiores, officia, magni expedita.
+                            <br><br>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, necessitatibus. Lorem ipsum dolor sit amet.
+                            <br><br>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, facilis? Aspernatur ea explicabo, pariatur amet adipisci quo quisquam quasi eum, labore voluptate doloremque quae ipsam beatae itaque quas odio asperiores?
+                            <br><br>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatem eos est adipisci quasi. Placeat id a omnis iusto aliquam.
+                        </p>
+                    </div>
+                    <hr>
+                </div>    
+        
+                <div class="card">
+                    <h2 class="card-title">Projects.</h2>
+                    <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias quas nesciunt, ut beatae tenetur dolore? Obcaecati sed recusandae dolorem suscipit perferendis ad nulla! Magnam, cumque. Ex magnam modi autem molestiae voluptate harum suscipit praesentium temporibus, nulla, ipsa cum distinctio explicabo aspernatur impedit nam id, dignissimos laborum eaque facilis asperiores!</p>
+                    </div>
+                    <hr>
+                </div>  
+                
+                <div class="card">
+                    <h2 class="card-title">Contact.</h2>
+                    <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias quas nesciunt, ut beatae tenetur dolore? Obcaecati sed recusandae dolorem suscipit perferendis ad nulla! Magnam, cumque. Ex magnam modi autem molestiae voluptate harum suscipit praesentium temporibus, nulla, ipsa cum distinctio explicabo aspernatur impedit nam id, dignissimos laborum eaque facilis asperiores!</p>
+                    </div>
+                    <a class="card-link">Link.</a>
+                </div>
+                <div id="footer"></div>
+            </div>
+
+        </div>
+</body>
+
+<script>
+    onload = function initialize()
+    {
+        let barHeight = document.getElementById('header-bar').offsetHeight;
+        let content = document.getElementById('content');
+
+        content.style.marginTop =  + barHeight+'px';
+
+        resizing();
+    };
+
+    window.onresize = resizing;
+    
+    function resizing()
+    {
+        console.log('sd');
+        let menuIcon = document.getElementById('menu-icon');
+        if (window.innerWidth >= 768)
+        {
+            oldParent = document.getElementById('nav-outer-holder');
+            newParent = document.getElementById('nav-inner-holder');
+            appendFromTo(oldParent,newParent);
+            doThingWithClassIfContains(menuIcon,'active',function() {menuIcon.classList.toggle('active');});
+            doThingWithClassIfContains(oldParent,'active',function() {menuIcon.classList.toggle('active');});
+        }
+        else
+        {
+            oldParent = document.getElementById('nav-inner-holder');
+            newParent = document.getElementById('nav-outer-holder');
+            appendFromTo(oldParent,newParent);
+            doThingWithClassIfNotContains(menuIcon,'active',function() {menuIcon.classList.toggle('active');});
+        }
+    };
+
+    function appendFromTo(oldParent,newParent)
+    {
+        while (oldParent.childNodes.length > 0) 
+        {
+            newParent.appendChild(oldParent.childNodes[0]);
+        }
+    }
+
+    function toggleNav()
+    {
+        let nav = document.getElementById('nav-outer-holder');
+        nav.classList.toggle('active');
+    }
+
+    function doThingWithClassIfContains(element,className,callback)
+    {
+        if (element.classList.contains(className))
+        {
+            console.log(callback);
+            callback();
+        }
+    }
+
+    function doThingWithClassIfNotContains(element,className,callback)
+    {
+        if (!element.classList.contains(className))
+        {
+            console.log(callback);
+            callback();
+        }
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,186 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #ececea;
+}
+
+#site-content
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+#content
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column: 1/13;
+    margin-top: 1em;
+}
+
+#canvas-holder
+{
+    grid-column: 2/12;
+    width: 100%;
+    margin: 2em 0em 2em 0em;
+}
+
+canvas
+{
+    border: 3px #484848 solid;
+    border-radius: 50%;
+}
+
+/*-----------*/
+#header
+{
+    position: fixed;
+    grid-column: 1/13;
+    width: 100%;
+    height: 100%;
+}
+
+#header-bar
+{
+    padding: 1em;
+    background-color: #484848;
+}
+
+#menu-icon
+{
+    display: none;
+    width: 2em;
+    margin-right: 1em;
+
+    cursor: pointer;
+}
+
+#menu-icon.active
+{
+    display: inline;
+}
+
+#header-title
+{
+    display: inline;
+
+    color: #ececea;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 3em;
+}
+
+/*-----NAV------*/
+#nav-menu
+{
+    background-color: #484848;
+    color: #ececea;
+    font-family: 'Roboto Slab', serif;
+    list-style: none;
+}
+
+#nav-inner-holder, #nav-inner-holder #nav-menu, #nav-inner-holder .nav-menu-option
+{
+    display: inline;
+}
+
+#nav-inner-holder 
+{
+    display: inline;
+    float: right;
+    padding-top: 1em;
+}
+
+#nav-inner-holder .nav-menu-option
+{
+    margin-left: 1em;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#nav-outer-holder
+{
+    display: none;
+    width: 66%;
+    height: 100%;
+
+    background-color: #484848;
+}
+
+#nav-outer-holder.active
+{
+    display: block;
+}
+
+#nav-outer-holder .nav-menu-option
+{
+    padding: 1em;
+    border-top: 1px solid #242424;
+}
+
+#nav-outer-holder .nav-menu-option:hover
+{
+    background-color: #363636;
+    cursor: pointer;
+}
+/*-----------*/
+
+.card
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column: 1/13;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.card-title
+{
+    grid-column: 2/12;
+    margin-bottom: .5em;
+    color: #484848;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card-text
+{
+    grid-column: 2/12;
+    color: #484848;
+    font-size: .9em;
+}
+
+hr
+{
+    grid-column: 2/12;
+    margin: 1em 0em 1em 0em;
+    border: none;
+    border-bottom: 3px #484848 solid;
+}
+
+.card-link
+{
+    grid-column: 2/12;
+    margin: .5em 0em .5em 0em;
+    color: #8c8c8c;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-link:hover
+{
+    color: #484848;
+    cursor: pointer;
+}
+
+#footer
+{
+    grid-column: 1/13;
+    height: 50px;
+    background-color: #484848;
+}
