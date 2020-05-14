@@ -14,7 +14,7 @@
             <div id='header'>
                 <div id="header-bar">
                     <img class="active" id="menu-icon" src="assets/menu-icon-light.svg" onclick="toggleNav()">
-                    <h1 id="header-title">RanDByyp</h1>        
+                    <h1 id="header-title"><a href="#site-content">RanDByyp</a></h1>        
                     <div id="nav-inner-holder">
                     </div>
                 </div>
@@ -98,10 +98,9 @@
 <script>
     onload = function initialize()
     {
-        let barHeight = document.getElementById('header-bar').offsetHeight;
+        let barHeight = document.getElementById('header').offsetHeight;
         let content = document.getElementById('content');
         content.style.marginTop =  + barHeight+'px';
-        document.getElementById('footer').style.height = barHeight+'px';
         document.documentElement.style.setProperty('--header-height', barHeight+'px');
 
         resizing();

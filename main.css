@@ -93,10 +93,20 @@ body
 {
     display: inline;
     grid-column: 3/6;
-    color: #e37676;
-    cursor: pointer;
     font-family: 'Roboto Slab', serif;
     font-size: 2.5em;
+}
+
+#header-title a
+{
+    text-decoration: none;
+    color: #e37676;
+    cursor: pointer;
+}
+
+#header-title a:hover
+{
+    color: #ececea;
 }
 
 /*-----Navigator------*/
@@ -240,7 +250,6 @@ hr
     grid-column: 1/13;
     margin-top: 2em;
     height: var(--header-height);
-    transform: scaleY(50%);
     background-color: #484848;
 }
 
