@@ -77,8 +77,11 @@ body
 #menu-icon
 {
     display: none;
+    grid-column: 11/12;
+    grid-row: 1;
+    justify-self: right;
     width: 1.5em;
-    margin: 1em 1em 0em 0em;
+    margin: 1em 0em 0em 0em;
 
     cursor: pointer;
 }
@@ -86,13 +89,12 @@ body
 #menu-icon.active
 {
     display: inline;
-    grid-column: 2/3;
 }
 
 #header-title
 {
     display: inline;
-    grid-column: 3/6;
+    grid-column: 2/6;
     font-family: 'Roboto Slab', serif;
     font-size: 2.5em;
 }
@@ -155,7 +157,7 @@ body
 #nav-outer-holder
 {
     display: none;
-    width: 66%;
+    width: 100%;
     height: 100%;
 
     background-color: #484848;
@@ -205,6 +207,16 @@ body
     grid-column: 1/13;
     color: #484848;
     font-size: .9em;
+}
+
+.card-text span
+{
+    font-weight: bold;
+}
+
+.card-text ul
+{
+    list-style-position: inside;
 }
 
 .card-link
@@ -294,11 +306,16 @@ hr
         margin-left: .25em;
     }
 
-    #about
+    #intro
     {
-        grid-column: 2/7;
+        grid-column: 2/6;
         grid-row: 1;
-        margin-top: 1.5em;
+        align-self: center;
+    }
+
+    #intro .card-title
+    {
+        font-size: 2em;
     }
 
     #image-holder
@@ -310,31 +327,23 @@ hr
 
 @media only screen and (min-width: 1024px) 
 {
+
     #header-title
     {
-        grid-column: 3/6;
+        grid-column: 2/6;
     }
 
-    #nav-inner-holder
+    .nav-menu-option
     {
-        grid-column: 6/11;
-    }   
+        font-size: .5em;
+    }
 
     #image-holder
     {
-        grid-column: 7/11;
+        grid-column: 7/12;
     }
 
-    .card
-    {
-        grid-column: 3/11;
-    }
   
-    #about
-    {
-        grid-column: 3/7;
-    }
-
     .card-title
     {
         font-size: 2em;
@@ -345,22 +354,33 @@ hr
         font-size: 1em;
     }
 
-    hr
+
+
+    #intro
     {
-        grid-column: 3/11;
+        grid-column: 2/7;
     }
 }
 
-
 @media only screen and (min-width: 1440px) 
 {
-    #about .card-title
+    .card-title
     {
         font-size: 2.5em;
     }
 
-    #about .card-text
+    .card-text
     {
-        font-size: 1.25em;
+        font-size: 1.5em;
+    }
+
+    .card-link
+    {
+        font-size: 2em;
+    }
+
+    #intro .card-title
+    {
+        font-size: 3em;
     }
 }

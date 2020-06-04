@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="utility.js"></script>
+    <script src="ui.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -34,17 +35,32 @@
                     <img id="image" src="assets/meCellLarge.png">
                 </div>
 
+                <div class="card" id="intro">
+                    <div class="card-contents">
+                        <h2 class="card-title">Joran de Boer.</h2>
+                        <div class="card-text">
+                            <p>
+                                <b>Creative person from the Netherlands with an interest in Art, Code and the combination thereof.</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="anchor card" id="about">
                     <div class="card-contents">
                         <h2 class="card-title">About.</h2>
                         <div class="card-text">
                             <p> 
-                                <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ab natus amet incidunt sit quam.</b>
-                                <br><br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora unde consequuntur dolorem aspernatur ex veritatis nam perferendis repudiandae itaque quod dolor maiores, officia, magni expedita.
-                                <br><br>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, necessitatibus. Lorem ipsum dolor sit amet.
+                                <ul>
+                                    <li><span>27 years old</span></li>
+                                    <li><span>From the Netherlands</span></li>
+                                    <li><span>Graduated in 'Art: Decoration and Restoration'</span></li>
+                                    <li><span>Worked with GML, C#, HTML, CSS, Javascript, Angular, p5.js library</span></li>
+                                </ul>
                                 <br>
+                                Having spent most of my life pursuing art, my interest in programming came as a surprise. I find it offers both a breadth and depth, yet is more tangible and less subjective than art. It's a fresh wind I mean to explore further.
+                                <br><br>
+                                Currently, I am focused on improving my frond-end skills but I'm also very excited about Generative Art, Procedural Generation and Game Development. When I can find the time I paint on canvas and I'm curious to someday combine this with my interest in programming.
                             </p>
                         </div>
                     </div>
@@ -54,7 +70,11 @@
                 <div class="anchor card" id="projects">
                     <h2 class="card-title">Projects.</h2>
                     <div class="card-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias quas nesciunt, ut beatae tenetur dolore? Obcaecati sed recusandae dolorem suscipit perferendis ad nulla! Magnam, cumque. Ex magnam modi autem molestiae voluptate harum suscipit praesentium temporibus, nulla, ipsa cum distinctio explicabo aspernatur impedit nam id, dignissimos laborum eaque facilis asperiores!</p>
+                        <p>Below you can find links to projects I've made during my programming journey. I started out in GML/GameMaker and after a lot of creating and experimenting I realized I really enjoy <span>making things happen on the screen by typing code</span> and chose to take it more seriously.
+                        <br><br>
+                        Shifting my focus toward C#, I started talking with people who program profesionally and worked on a few more projects.
+                        <br><br>
+                        Eventually I realized most of my enjoyment springs from working on visual projects or fidgeting with UI. Again I shifted my focus, this time toward Javascript and front-end, which suits me much better.</p>
                     </div>
                 </div>  
                 <hr>
@@ -62,25 +82,80 @@
                 <div class="card">
                     <h2 class="card-title">GameMaker.</h2>
                     <div class="card-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias quas nesciunt, ut beatae tenetur dolore? Obcaecati sed recusandae dolorem suscipit perferendis ad nulla! Magnam, cumque. Ex magnam modi autem molestiae voluptate harum suscipit praesentium temporibus, nulla, ipsa cum distinctio explicabo aspernatur impedit nam id, dignissimos laborum eaque facilis asperiores!</p>
+                        <p>My first projects were written in GML, using GameMaker Studio 2. I've made several small projects consisting of game mechanics that can be used in larger game-related projects. 
+                        <br><br>
+                        Among other things, it gave me a basic understanding of if-statements, for-loops, switches and finite-state machines. It also taught me the importance of project scope and the dangers of feature creep.</p>
                     </div>
-                    <a class="card-link" href="https://randatabase.itch.io/" target="_blank">My itch.io.</a>
+                    <a class="card-link" href="https://randatabase.itch.io/" target="_blank">Go to my itch.io.</a>
+                </div>  
+                <hr>
+
+                
+                <div class="card">
+                    <h2 class="card-title">MapGen Bronze (C#).</h2>
+                    <div class="card-text">
+                        <p>One of the bigger projects I have made is a 2D Map Generator, which was made as a C# Console Application using Simplex Noise to generate it's landmass and biomes. The generated maps can be saved (and loaded) as JSON files and can be navigated using the arrow-keys. 
+                        <br><br>
+                        This project taught me my first lessons in C#, the importance of keeping my code organized and made me familiar with the use of libraries.</p>
+                    </div>
+                    <a class="card-link" href="https://github.com/RanDByyp/MapGen-Bronze/" target="_blank">Go to Project Page.</a>
                 </div>  
                 <hr>
 
                 <div class="card">
-                    <h2 class="card-title">MapGen</h2>
+                    <h2 class="card-title">Generative Art (p5.js).</h2>
                     <div class="card-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias quas nesciunt, ut beatae tenetur dolore? Obcaecati sed recusandae dolorem suscipit perferendis ad nulla! Magnam, cumque. Ex magnam modi autem molestiae voluptate harum suscipit praesentium temporibus, nulla, ipsa cum distinctio explicabo aspernatur impedit nam id, dignissimos laborum eaque facilis asperiores!</p>
+                        <p>My interest in generative art led me to try out the p5.js library. After a few experiments, I made a simple generator that uses the Random-Walker technique to generate and draw visuals (influenced by several adjustable variables) onto a HTML Canvas.
+                        <br><br>    
+                        Working on this project taught more about organizing, refactoring and commenting my code.</p>
                     </div>
-                    <a class="card-link" href="https://randbyyp.github.io/MapGen-Gold/" target="_blank">Latest Version.</a>
+                    <a class="card-link" href="https://randbyyp.github.io/Generation-Station-Random-Walker/" target="_blank">Go to Live Project.</a>
+                </div>  
+                <hr>
+
+                <div class="card">
+                    <h2 class="card-title">Dice Roller (Angular).</h2>
+                    <div class="card-text">
+                        <p>To learn more about Javascript frameworks I made a project in Angular 8, namely, a digital Dice Roller with a variety of die to choose from.
+                        <br><br>
+                        Making this Dice Roller showed me the value of Javascript frameworks, made me more familiar with HTML and CSS and was my first attempt at responsive design.
+                        </p>
+                    </div>
+                    <a class="card-link" href="https://randbyyp.github.io/Dice-Roller/" target="_blank">Go to Live Project.</a>
+                </div>  
+                <hr>
+
+                <div class="card">
+                    <h2 class="card-title">MapGen Gold (p5.js).</h2>
+                    <div class="card-text">
+                        <p>When I began to become more comfortable with HTML, CSS and JS, I started wondering if I could recreate my Map Generator using the p5.js library. This went easier than expected and the project turned out far better than my C# Map Generator. 
+                        <br><br>
+                        It uses Perlin Noise to generate it's maps, has a menu to manipulate the generation process and has different visual options. I'm not done with it yet and plan to add a lot more features.
+                        <br><br>
+                        The size of this project makes it a challenge to keep it organized but that's just a lesson to learn. Working on this, I gained more knowledge about HTML, CSS, Javascript and p5.js. I also learned more about binding UI to logic and dynamically creating HTML input elements.</p>
+                    
+                    </div>
+                    <a class="card-link" href="https://randbyyp.github.io/MapGen-Gold/" target="_blank">Go to Live Project.</a>
+                </div>  
+                <hr>
+
+                <div class="card">
+                    <h2 class="card-title">Template Canvas UI (HTML/JS).</h2>
+                    <div class="card-text">
+                        <p>Since I started making more HTML Canvas based projects, I decided to create a responsive template UI for it, which only needs to be hooked up to it's program's logic.
+                        <br><br>
+                        This project deepened my understanding of responsive design, and taught me more about modular design.</p>
+                    </div>
+                    <a class="card-link" href="https://randbyyp.github.io/Responsive-Template-Canvas-UI/" target="_blank">Go to Live Project.</a>
                 </div>  
                 <hr>
                 
                 <div class="anchor card" id="contact">
                     <h2 class="card-title">Contact.</h2>
                     <div class="card-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias quas nesciunt, ut beatae tenetur dolore? Obcaecati sed recusandae dolorem suscipit perferendis ad nulla! Magnam, cumque. Ex magnam modi autem molestiae voluptate harum suscipit praesentium temporibus, nulla, ipsa cum distinctio explicabo aspernatur impedit nam id, dignissimos laborum eaque facilis asperiores!</p>
+                        <p>Do you have a question, want to know more about my projects, something else? 
+                        <br><br>    
+                        Feel free to contact me!</p>
                     </div>
                     <div id="socials">
                         <a href="https://github.com/RanDByyp" target="_blank"><img class="social-icon" src="assets/gitHubLogo.png" width="50px"></a>
@@ -94,46 +169,4 @@
             <div id="footer"></div>
         </div>
 </body>
-
-<script>
-    onload = function initialize()
-    {
-        let barHeight = document.getElementById('header').offsetHeight;
-        let content = document.getElementById('content');
-        content.style.marginTop =  + barHeight+'px';
-        document.documentElement.style.setProperty('--header-height', barHeight+'px');
-
-        resizing();
-    };
-
-    window.onresize = resizing;
-    
-    function resizing()
-    {
-        let menuIcon = document.getElementById('menu-icon');
-        if (window.innerWidth >= 768)
-        {
-            oldParent = document.getElementById('nav-outer-holder');
-            newParent = document.getElementById('nav-inner-holder');
-            appendFromTo(oldParent,newParent);
-            doThingWithClassIfContains(menuIcon,'active',function() {menuIcon.classList.toggle('active');});
-            doThingWithClassIfContains(oldParent,'active',function() {oldParent.classList.toggle('active');});
-        }
-        else
-        {
-            oldParent = document.getElementById('nav-inner-holder');
-            newParent = document.getElementById('nav-outer-holder');
-            appendFromTo(oldParent,newParent);
-            doThingWithClassIfNotContains(menuIcon,'active',function() {menuIcon.classList.toggle('active');});
-        }
-    };
-
- 
-
-    function toggleNav()
-    {
-        let nav = document.getElementById('nav-outer-holder');
-        nav.classList.toggle('active');
-    }
-</script>
 </html>
