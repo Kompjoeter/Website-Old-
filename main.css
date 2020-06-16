@@ -209,16 +209,6 @@ body
     font-size: .9em;
 }
 
-.bold
-{
-    font-style: bold;
-}
-
-.italic
-{
-    font-style: italic;
-}
-
 .card-text ul
 {
     list-style-position: inside;
@@ -258,6 +248,16 @@ hr
     margin: 1em 0em 1em 0em;
     border: none;
     border-bottom: 3px #484848 solid;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.italic
+{
+    font-style: italic;
 }
 
 /*-----Footer-----*/
